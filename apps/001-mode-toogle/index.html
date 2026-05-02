@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="Best tool for Toogle Power off and Power on, Best tool for industrial Use">
+        <title>MODE TOOGLE</title>
+        <link rel="stylesheet" href="src/style.css">
+        <link rel="shortcut icon" href="resource/javascript.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono:regular" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Orbitron:regular,500,600,700,800,900" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,regular,500,600,700" rel="stylesheet"/>
+    
+    </head>
+
+    <body>
+        
+        <header>
+
+            <div class="left-header">
+                <p class="title-header">LCU-01</p>
+                <span>//</span>
+                <p class="title-header2">Light Control Unit</p>
+            </div>
+
+            <div class="right-header">
+
+                <div class="pwr">
+                    <span class="yellow-dot"></span>
+                    <p>PWR</p>
+                </div>
+
+                <div class="act">
+                    <span class="red-dot"></span>
+                    <p>ACT</p>
+                </div>
+
+                <time>00:00:00</time>
+
+            </div>
+
+        </header>
+
+        <div class="main-wrapper">
+
+            <aside aria-label="left-sidebar" class="left-sidebar">
+
+                <div class="left-sidebar-title-div">
+                    <h2 class="left-sidebar-title">power metrics</h2>
+                    <div class="sideline"></div>
+                </div>
+                
+                <div class="power-stats-div">
+
+                    <div class="power-stats leftsideabr-item-1">
+                        <p>voltage</p>
+                        <h2>000  <span>V</span></h2>
+                        <div class="sideline1"></div>
+                    </div>
+                    
+                    <div class="power-stats leftsidebar-item-2">
+                        <p>Current</p>
+                        <h2>0.0 <span>A</span></h2>
+                        <div class="sideline1"></div>
+                    </div>
+                    
+                    <div class="power-stats leftsidebar-item-3">
+                        <p>wattage</p>
+                        <h2>000 <span>W</span></h2>
+                        <div class="sideline1"></div>
+                    </div>
+
+                </div>
+                
+                <div class="breakline"></div>
+                
+                <div class="left-sidebar-title-div">
+                    <p class="left-sidebar-title">uptime</p>
+                    <div class="sideline"></div>
+                </div>
+                
+                <div class="session">
+                    <p>session</p>
+                    <h2>00:00:00</h2>
+                </div>
+                
+                <div class="breakline"></div>
+                
+                <div class="left-sidebar-title-div">
+                    <p class="left-sidebar-title">schedule</p>
+                    <div class="sideline"></div>
+                </div>
+
+                <div class="time-up-down"></div>
+
+            </aside>
+
+            <main>
+
+                <div class="plus-icon">
+                    <p>+</p>
+                    <p>+</p>
+                </div>
+
+                <div class="bulb-div">
+                    <div class="horizontal-line"></div>
+                    <div class="bulb-filament"></div>
+                    <div class="bulb"></div>
+                </div>
+
+                <div class="power-btn-div">
+                    <div class="power-btn">
+                        <img src="RESOURCE/switch on.png" alt="CLICK">
+                    </div>
+                </div>
+
+                <div class="extra-information">
+
+                    <p class="extra-information-title">standby</p>
+
+                    <div>
+                        <p>circuit breaker</p>
+                        <span>armed</span>
+                    </div>
+
+                    <div>   
+                        <p>load factor</p>
+                        <span>0.00</span>
+                    </div>
+
+                    <div class="state">
+                        <p>state:</p>
+                        <p>off</p>
+                    </div>
+
+                </div>
+
+                <div class="plus-icon">
+                    <p>+</p>
+                    <p>+</p>
+                </div>
+
+            </main>
+
+            <aside aria-label="right-sidebar" class="right-sidebar">
+
+                <div class="right-sidebar-title-div">
+                    <p class="right-sidebar-title">efficiency</p>
+                    <div class="sideline"></div>
+                </div>
+
+                <div class="effeciency-stats-div">
+
+                    <div class="efficiency-stats-items">
+                        <p>prime factor</p>
+                        <h2>0.00</h2>
+                        <div class="sideline1"></div>
+                    </div>
+
+                    <div class="efficiency-stats-items">
+                        <p>frequency</p>
+                        <h2>00.0 <span>hz</span></h2>
+                        <div class="sideline1"></div>
+                    </div>
+
+                </div>
+
+                <div class="breakline"></div>
+
+                <div class="right-sidebar-title-div">
+                    <p class="right-sidebar-title">version control</p>
+                    <div class="sideline"></div>
+                </div>    
+
+                <div class="version-control">
+                </div>
+
+                <div class="breakline"></div>
+
+                <div class="right-sidebar-title-div">
+                    <p class="right-sidebar-title">device info</p>
+                    <div class="sideline"></div>
+                </div>
+
+                <div class="device-info">
+
+                    <div class="device-card">
+                        <h2>My Device Stats</h2>
+                        <p><strong>Browser:</strong> <span id="browser"></span></p>
+                        <p><strong>Platform:</strong> <span id="platform"></span></p>
+                        <p><strong>Screen Size:</strong> <span id="screen"></span></p>
+                        <p><strong>Window Size:</strong> <span id="window"></span></p>
+                        <p><strong>Language:</strong> <span id="lang"></span></p>
+                        <p><strong>Status:</strong> <span id="online"></span></p>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+        <footer>
+
+            <div class="left-footer">
+                <p>&COPY; Karan Pillay</p>
+                <div class="left-footer-innerdiv">
+                    <p class="title-footer">DARK MODE TOOGLE</p>
+                    <h4>v0.0.1</h4>
+                </div>
+            </div>
+
+            <div class="center-footer">
+                <p>GITHUB</p>
+                <span>||</span>
+                <p>LINKDEN</p>
+                <span>||</span>
+                <p>DOCUMENTATION</p>
+            </div>
+
+            <div class="right-footer">
+                <p>PRESS</p>
+                <p class="space">SPACE</p>
+                <p>TO TOOGLE</p>
+                <time datetime="">FRI 24 APR 2066</time>
+            </div>
+
+        </footer>
+
+        <script src="SRC/index.js"></script>
+
+    </body>
+
+</html>

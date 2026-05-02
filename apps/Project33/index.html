@@ -1,0 +1,255 @@
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+    <head>  
+
+        <!-- Character encoding -->
+        <meta charset="utf-8">
+
+        <!-- Responsive design for mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Description for SEO -->
+        <meta name="description" content="The best calculator for problem solving">
+
+        <!-- Theme color for browser UI -->
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Open Graph (social sharing) -->
+        <meta property="og:title" content="CYBER CALC V2.0">
+        <meta property="og:description" content="The best calculator for problem solving">
+        <meta property="og:type" content="website">
+
+        <!-- Favicon (browser tab icon) -->
+        <link rel="icon" href="IMG/javascript.png" type="image/x-icon">
+
+        <!-- Apple touch icon for iOS devices -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <!-- Page title -->
+        <title>CALCULATOR</title>
+
+        <!-- External CSS file -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Font Awesome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    </head>  
+
+    <body>  
+
+        <!-- Header section -->
+        <header>  
+
+            <!-- Left side of header -->
+            <div class="header-left-div">
+                <!-- Status label -->
+                <p class="header-status-lable">CALCULATOR</p>
+
+                <!-- System ready indicator -->
+                <p class="sys-ready">SYS READY</p>
+
+                <!-- Live clock -->
+                <time class="header-clock" id="clock">00:00:00</time>
+            </div>  
+
+            <!-- Right side of header -->
+            <div class="header-right-div">
+                <!-- App title -->
+                <p class="header-title">CYBER CALC</p>
+
+                <!-- Version number -->
+                <span class="header-version">V2.0</span>
+
+                <!-- Theme toggle button -->
+                <button class="theme-toggle"></button>
+            </div>  
+
+        </header>  
+
+        <div class="main-wrapper">
+                
+            <!-- Main calculator area -->
+            <main>  
+
+                <!-- Top status bar -->
+                <section aria-label="status-bar" class="main-header-section">  
+                    
+                    <!-- Left side -->
+                    <div class="main-header-left-section">
+                        <!-- Title with signal indicator -->
+                        <h2 class="main-header-title">WEB MASTER<span class="green-signal"></span></h2>
+                    </div>  
+                    
+                    <!-- Right side controls -->
+                    <div class="main-header-right-section">
+
+                        <!-- Standard mode button -->
+                        <button type="button" class="calc-mode std-mode active" aria-pressed="true">STD</button>
+
+                        <!-- Scientific mode button -->
+                        <button type="button" class="calc-mode sci-mode" aria-pressed="false">SCI</button>
+                        
+                        <!-- Settings button -->
+                        <button type="button" class="settings-btn active" aria-label="Open System Settings">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+
+                    </div>  
+                    
+                </section>  
+                
+                <!-- Input display -->
+                <section aria-label="input-field" class="main-input-section" >
+                    <!-- Calculator display (readonly so user can't type manually) -->
+                    <input type="text" inputmode="decimal" placeholder="00" name="Calc" id="main-input-tag" readonly>
+                </section>  
+
+                <!-- Calculator keypad -->
+                <section aria-label="calculator keypad" class="main-number-section">  
+
+                    <div class="main-number-div">
+
+                        <!-- Clear all -->
+                        <button class="number-btn" id="AC" value="ac">AC</button>
+
+                        <!-- Backspace -->
+                        <button class="number-btn" aria-label="Backspace" id="backspace" value="backspace">←</button>
+                        
+                        <!-- Percent -->
+                        <button class="number-btn" aria-label="Percent" value="percent" id="percent">%</button>
+                        
+                        <!-- Addition -->
+                        <button class="number-btn" aria-label="Plus" value="plus" id="plus">+</button>
+                        
+                        <!-- Number buttons -->
+                        <button class="number-btn" value="7" id="seven">7</button>
+                        <button class="number-btn" value="8" id="eight">8</button>
+                        <button class="number-btn" value="9" id="nine">9</button>
+
+                        <!-- Multiply -->
+                        <button class="number-btn" aria-label="Multiply" id="multiply" value="multiply">×</button>
+                        
+                        <button class="number-btn" value="4" id="four">4</button>
+                        <button class="number-btn" value="5" id="five">5</button>
+                        <button class="number-btn" value="6" id="six">6</button>
+
+                        <!-- Subtract -->
+                        <button class="number-btn" aria-label="Subtract" value="minus" id="Subtract">–</button>
+
+                        <button class="number-btn" value="1" id="one">1</button>
+                        <button class="number-btn" value="2" id="two">2</button>
+                        <button class="number-btn" value="3" id="three">3</button>
+                        
+                        <!-- Divide -->
+                        <button class="number-btn" aria-label="Divide" id="divide" value="divide">÷</button>
+
+                        <!-- Zero (special styling) -->
+                        <button class="number-btn" aria-label="" value="0" id="special-btn">0</button>
+
+                        <!-- Decimal point -->
+                        <button class="number-btn" value="dot" id="dot">.</button>
+
+                        <!-- Equals -->
+                        <button class="number-btn" aria-label="Equals" value="=" id="equal">=</button>
+
+                    </div> 
+                    
+                </section>  
+
+            </main>  
+            
+            <!-- Sidebar (extra features) -->
+            <aside aria-label="System Diagnostics" class="sidebar-section">  
+
+                <!-- Calculation history -->
+                <div class="history-log sidebar-section-items">
+                    <h2>History Log</h2>
+                    <div id="dynamic-history-log">
+                        <!--DATA ISERTED BY JS-->
+                    </div>    
+                </div>
+
+                <hr>
+
+                <!-- Session statistics -->
+                <div class="stats-session sidebar-section-items">
+                    <h3>Session Stats</h3>
+                    <div class="stat-item">
+                        <h4>UPTIME:</h4>
+                        <span id="session-uptime">02:14:55</span>
+                    </div>
+                    <div class="stat-item">
+                        <label>Queries:</label>
+                        <span id="query-count">24</span>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- System monitor -->
+                <div class="sys-monitor sidebar-section-items">
+                    <h3>System Monitor</h3>
+                    <div class="monitor-bar">
+                        <span>CPU Usage</span>
+                        <div class="progress-bg"><div class="progress-fill" style="width: 42%;"></div></div>
+                    </div>
+                    <div class="monitor-bar">
+                        <span>Memory</span>
+                        <div class="progress-bg"><div class="progress-fill" style="width: 68%;"></div></div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- Quick conversions (e.g., units) -->
+                <div class="quick-convert sidebar-section-items">
+                    <h3>Quick Convert</h3>
+                    <div class="convert-controls">
+                        <input type="number" placeholder="Value" aria-label="Conversion value">
+                        <select aria-label="Unit selection">
+                            <option value="km-mi">km to mi</option>
+                            <option value="kg-lb">kg to lb</option>
+                            <option value="c-f">°C to °F</option>
+                        </select>
+                        <button type="button">Go</button>
+                    </div>
+                </div>  
+                
+            </aside>  
+        
+        </div>
+
+        <!-- Footer -->
+        <footer>  
+            
+            <!-- Left side -->
+            <div class="footer-left">
+                <!-- Copyright -->
+                <small>&copy; 2026 CYBER_CALC_OS</small>
+            </div>  
+
+            <!-- Navigation links -->
+            <nav class="footer-center" aria-label="Footer Navigation">
+                <ul>
+                    <li><a href="#">DOCS</a></li>
+                    <li><a href="#">GITHUB</a></li>
+                    <li><a href="#">SUPPORT</a></li>
+                </ul>
+            </nav>  
+
+            <!-- Status indicator -->
+            <div class="footer-right">
+                <p>STATUS: <span class="status-text">ONLINE</span></p>
+            </div>  
+
+        </footer>  
+
+        <!-- JavaScript file -->
+        <script src="index.js"></script>  
+
+    </body>  
+    
+    </html>
