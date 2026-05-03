@@ -629,3 +629,7 @@ footer{
 .right-footer time{
     color: var(--off-accent);
 }
+/* OTHER */
+.text{
+    color: var(--text-bright);
+}
