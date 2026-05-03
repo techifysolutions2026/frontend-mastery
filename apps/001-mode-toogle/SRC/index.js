@@ -7,7 +7,7 @@ const mainObject = document.querySelector(".bulb");
 //! FUNCTION
 function mainFunction(){
     mainObject.style.backgroundColor = "var(--warn)"
-    mainObject.style.background = "box-shadow: 0 0 30px gold;"
+    mainObject.style.boxShadow = "0 0 30px gold"
 }
 
 mainBtn.addEventListener("click", mainFunction)

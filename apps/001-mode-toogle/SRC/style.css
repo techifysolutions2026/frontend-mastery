@@ -71,7 +71,7 @@ header{
 }
 
 .title-header{
-    color: var(--accent);
+    color: var(--off-accent);
     font-family: var(--font-secondary);
     font-weight: 700;
     font-size: 1.1rem;
@@ -171,6 +171,10 @@ header{
     display: flex;
 }
 
+.accent-border{
+    border-left: 2px solid var(--off-accent);
+}
+
 /*LEFT SIDEBAR*/
 .left-sidebar{
     background-color: var(--panel);
@@ -218,7 +222,7 @@ header{
     border-radius: 1px;
     font-family: var(--font-main);
     border: 2px solid var(--border);
-    border-left: 2px solid var(--accent);
+    border-left: 2px solid var(--off-accent);
     padding: 10px 20px;
     letter-spacing: 1.3px;
     min-width: 100%;
@@ -230,7 +234,7 @@ header{
 }
 
 .power-stats h2{
-    color: var(--text-bright);
+    color: var(--text-dim);
 }
 
 .power-stats span{
@@ -240,7 +244,7 @@ header{
 .breakline{
     width: auto;
     height: 2px;
-    background-color: var(--accent);
+    background-color: var(--off-accent);
     margin: 20px -20px;
 }
 
@@ -257,7 +261,7 @@ header{
     border-radius: 1px;
     font-family: var(--font-main);
     border: 2px solid var(--border);
-    border-left: 2px solid var(--accent);
+    border-left: 2px solid var(--off-accent);
     padding: 10px 20px;
     letter-spacing: 1.3px;
     min-width: 100%;
@@ -269,7 +273,7 @@ header{
     }
     
     h2{
-        color: var(--text-bright);
+        color: var(--text-dim);
     }
 }
 
@@ -486,7 +490,7 @@ main{
     border-radius: 1px;
     font-family: var(--font-main);
     border: 2px solid var(--border);
-    border-left: 2px solid var(--accent);
+    border-left: 2px solid var(--off-accent);
     padding: 10px 20px;
     letter-spacing: 1.3px;
     min-width: 100%;
@@ -498,7 +502,7 @@ main{
 }
 
 .efficiency-stats-items h2{
-    color: var(--text-bright);
+    color: var(--text-dim);
 }
 
 .efficiency-stats-items span{
@@ -539,13 +543,13 @@ main{
 
 .device-card h2{
     font-family: var(--font-main);
-    color: var(--dim);
+    color: var(--text-dim);
     font-size: 1rem;
     margin-bottom: 4px;
 }
 
 .device-card p{
-    color: var(--text-bright);
+    color: var(--text-dim);
     margin-bottom: 4px;
 }
 
@@ -592,7 +596,7 @@ footer{
 }
 
 .title-footer{
-    color: var(--accent);
+    color: var(--off-accent);
 }
 
 /*CENTER FOOTER*/
@@ -605,7 +609,7 @@ footer{
 }
 
 .center-footer span{
-    color: var(--accent);
+    color: var(--off-accent);
     font-weight: 900;
 }
 
@@ -618,10 +622,10 @@ footer{
 }
 
 .space{
-    border: 3px solid var(--accent);
+    border: 3px solid var(--off-accent);
     padding: 3px 9px;
 }
 
 .right-footer time{
-    color: var(--accent2);
+    color: var(--off-accent);
 }
