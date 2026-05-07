@@ -248,9 +248,65 @@ main{
     width: 30px;
     height: 30px;
     position: absolute;   
-    margin-left: 8px;
+    margin-left: 10px;
 }
 
+.general h3{
+    font-family: var(--font-secondary);
+    font-weight: 800;
+    font-size: 1.8rem;  
+    margin: 10px 0;
+}
+
+.plus-icon{
+    background-color: var(--accent-primary);
+    padding: 0 9px;
+    border-radius: 10px;    
+    font-size: 2rem;
+    font-weight: 900;
+    color: black;
+}
+
+.question{
+    font-size: 1.5rem;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+}
+
+.question-div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.que{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.ans{
+    display: flex;
+    align-items: center;
+}
+
+.ans div{
+    display: flex;
+    align-items: center;
+}
+
+.ans img{
+    width: 10px;
+    height: 10px;
+}
+
+.ans div img{
+    width: 10px;
+    height: 10px;
+}
+
+/*SCROLL BAR STYLE*/
 ::-webkit-scrollbar {
   width: 0;              
   height: 0;          
@@ -270,8 +326,6 @@ main{
   background: var(--accent-primary);
   box-shadow: 0 0 10px var(--accent-primary);
 }
-
-
 
 /*FOOTER*/
 footer{
