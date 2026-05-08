@@ -1,13 +1,448 @@
-﻿<!DOCTYPE html>
+﻿<!--VERSION HTML 5-->
+<!DOCTYPE html>
+
+<!--PARENT CONTAINER-->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validator</title>
-    <link rel="stylesheet" href="src/css/styles.css">
-</head>
-<body>
-    <h1>Project Initialized</h1>
-    <script src="src/js/script.js"></script>
-</body>
+
+    <!--META DATA-->
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The best website for protection">
+        <title>Form Validator</title>
+        <link rel="stylesheet" href="src/css/styles.css">
+        <link rel="icon" href="/resource/global/img/javascript.png">
+        <link href="https://fonts.googleapis.com/css?family=Syne:regular,500,600,700,800" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=DM+Mono:300,300italic,regular,italic,500,500italic" rel="stylesheet" />
+
+    </head>
+
+    <!--WBBSITE STRUCTURE-->
+    <body>
+
+        <!-- HEADER -->
+        <header>
+
+            <div>
+
+                <!-- Logo / Brand -->
+                <div>
+                    <span>FV</span>
+                    <div>
+                        <h1>Form Validation Unit</h1>
+                        <p>FVU-01 · V3.0.0</p>
+                    </div>
+                </div>
+
+                <!-- SYSTEM STATUS -->
+                <div class="system-stauts">
+                    <span>● SYS ONLINE</span>
+                    <time>17:39:25</time>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- LEFT SIDEBAR -->
+        <aside class="left-sidebar">
+
+            <!-- FIELD STATUS -->
+            <section class="field-status">
+                
+                <div>               
+                    <h2>FIELD STATUS</h2>
+                    <div class="sideline"></div>
+                </div>
+
+                <!-- FIELD STATUS ITEMS LIST -->
+                <div class="field-status-list">
+
+                    <div class="field-status-item">
+                    <div class="circle"></div>
+                    <p>NAME</p>
+                    </div>
+
+                    <div class="field-status-item">
+                    <div class="circle"></div>
+                    <p>EMAIL</p>
+                    </div>
+
+                    <div class="field-status-item">
+                    <div class="circle"></div>
+                    <p>PASS</p>
+                    </div>
+
+                    <div class="field-status-item">
+                    <div class="circle"></div>
+                    <p>PHONE</p>
+                    </div>
+
+                    <div class="field-status-item">
+                    <div class="circle"></div>
+                    <p>URL</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- METRICS -->
+            <section class="metrics">
+
+                <div>
+                    <h2>METRICS</h2>
+                    <div class="sideline"></div>
+                </div>
+
+                <div>
+
+                    <!-- VALID COUNT -->
+                    <div class="valid-count">
+                        <h3>VALID</h3>
+                        <p>00</p>
+                    </div>
+
+                    <!-- ERROR COUNT -->
+                    <div class="error-count">
+                        <h3>ERRORS</h3>
+                        <p>00</p>
+                    </div>
+
+                </div>
+
+                <!-- PASSWORD STRENGTH -->
+                <div>
+
+                    <h3>PASS STRENGTH</h3>
+
+                    <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- SYSTEM -->
+            <section class="system">
+
+                <div>
+                    <h2>SYSTEM</h2>
+                    <div class="sideline"></div>
+                </div>
+
+                <div class="system-list">
+
+                    <div class="system-item">
+                        <span>STATUS</span>
+                        <strong>ONLINE</strong>
+                    </div>
+
+                    <div class="system-item">
+                        <span>MODULE</span>
+                        <strong>FORM</strong>
+                    </div>
+
+                    <div class="system-item">
+                        <span>FIELDS</span>
+                        <strong>05</strong>
+                    </div>
+
+                    <div class="system-item">
+                        <span>UPTIME</span>
+                        <time>00:00:02</time>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- SECURITY STATUS -->
+            <section class="security-status">
+
+                <h2>SECURITY</h2>
+
+                <div class="security-card">
+
+                    <div class="security-item">
+                        <span>ENCRYPTION</span>
+                        <strong>ACTIVE</strong>
+                    </div>
+
+                    <div class="security-item">
+                        <span>SCAN</span>
+                        <strong>CLEAN</strong>
+                    </div>
+
+                    <div class="security-item">
+                        <span>THREATS</span>
+                        <strong>0</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </aside>
+
+        <!-- MAIN -->
+        <main>
+
+            <!-- TOP BAR -->
+            <section class="top-panel">
+
+                <div class="topbar-header">
+                    <span></span>
+                    <p>REGISTRATION</p>
+                </div>
+
+                <div class="panel-heading">
+                    <h2>VALIDATION CONSOLE</h2>
+                    <p>REAL-TIME INPUT ANALYSIS</p>
+                </div>
+
+            </section>
+
+            <!-- FORM SECTION -->
+            <section class="form-section">
+
+                <form>
+
+                    <!-- NAME -->
+                    <div class="input-group">
+
+                        <div>
+                            <label for="name"> <span>01</span>NAME</label>
+                            <label for="name">IDEL</label>
+                        </div>
+
+                        <input 
+                        type="text" 
+                        id="name" 
+                        name="name"
+                        placeholder="ENTER FULL NAME"
+                        >
+
+                        <small>Awaiting input...</small>
+
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="input-group">
+
+                        <div>
+                            <label for="email"><span>02</span>EMAIL</label>
+                            <label for="email">IDEL</label>
+                        </div>
+
+                        <input 
+                        type="email" 
+                        id="email" 
+                        name="email"
+                        placeholder="ENTER EMAIL ADDRESS"
+                        >
+
+                        <small>Awaiting input...</small>
+
+                    </div>
+
+                    <!-- PASSWORD -->
+                    <div class="input-group">
+
+                        <div>
+                            <label for="password"><span>03</span>PASSWORD</label>
+                            <label for="password">IDEL</label>
+                        </div>
+
+                        <input 
+                        type="password" 
+                        id="password" 
+                        name="password"
+                        placeholder="ENTER PASSWORD"
+                        >
+
+                        <small>Awaiting input...</small>
+
+                    </div>
+
+                    <!-- PHONE -->
+                    <div class="input-group">
+
+                        <div>
+                            <label for="phone"><span>04</span>PHONE</label>
+                            <label for="phone">IDEL</label>
+                        </div>
+
+                        <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone"
+                        placeholder="ENTER PHONE NUMBER"
+                        >
+
+                        <small>Awaiting input...</small>
+
+                    </div>
+
+                    <!-- URL -->
+                    <div class="input-group">
+
+                        <div>
+                            <label for="url"><span>05</span>URL <span>(OPTIONAL)</span></label>
+                            <label for="url">IDEL</label>
+                        </div>
+
+                        <input 
+                        type="url" 
+                        id="url" 
+                        name="url"
+                        placeholder="ENTER WEBSITE URL"
+                        >
+
+                        <small>Awaiting input...</small>
+
+                    </div>
+
+                </form>
+
+                <button class="sumbit-btn">
+                    SUMBIT-VALIDATE ALL FIELDS
+                </button>
+
+            </section>
+
+        </main>
+
+        <!-- RIGHT SIDEBAR -->
+        <aisde class="right-sidebar">
+
+            <!-- CHANGE LOG -->
+            <section class="changelog">
+
+                <h2>VERSION</h2>
+
+                <div class="log-container">
+                </div>
+
+            </section>
+
+            <!-- NETWORK -->
+            <section class="network-panel">
+
+                <h2>NETWORK</h2>
+
+                <div class="network-stats">
+
+                    <div class="network-item">
+                        <span>PING</span>
+                        <strong>21MS</strong>
+                    </div>
+
+                    <div class="network-item">
+                        <span>DATA</span>
+                        <strong>STABLE</strong>
+                    </div>
+
+                    <div class="network-item">
+                        <span>SYNC</span>
+                        <strong>ONLINE</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- RULES ENGINE -->
+            <section class="rules-engine">
+
+                <h2>RULES ENGINE</h2>
+
+                <div class="rules-list">
+
+                    <div class="rule-item">
+                        <div class="rule-indicator"></div>
+                        <p>Name Validation</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <div class="rule-indicator"></div>
+                        <p>Email Pattern Check</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <div class="rule-indicator"></div>
+                        <p>Password Security</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <div class="rule-indicator"></div>
+                        <p>Phone Format Match</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <div class="rule-indicator"></div>
+                        <p>URL Verification</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- VALIDATION PROGRESS -->
+            <section class="validation-progress">
+
+                <h2>PROGRESS</h2>
+
+                <div class="progress-container">
+
+                    <div class="progress-info">
+                        <span>VALIDATION</span>
+                        <strong>0%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </aisde>
+
+        <!--FOOTER-->
+        <footer>
+
+            <!--CREATOR INFO-->
+            <section class="module">
+                <h4>&copy; KARAN PILLAY</h4>
+                <h4>MODULE : <span>FORM VALIDATOR</span></h4>
+            </section>
+
+            <!--DOCUMENTATION-->
+            <section class="nav">
+                <p>GITHUB</p>
+                <span>||</span>
+                <p>DOCUMENTATION</p>
+            </section>
+
+            <!--STATE-->
+            <section class="state">
+                <p>STATE</p>
+                <span>:</span>
+                <p>IN PROGRESS`</p>
+            </section>
+
+        </footer>
+
+        <!--JAVASCRIPT LINK-->
+        <script src="src/js/script.js"></script>
+
+    </body>
+
 </html>
