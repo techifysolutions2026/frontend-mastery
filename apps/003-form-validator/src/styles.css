@@ -58,14 +58,20 @@ body{
     display: flex;
     align-items: center;
     gap: 15px;
+    user-select: none;
+    cursor: pointer;
 }
 
 .nav p {
-    font-size: 0.75rem;
-    font-weight: 800;
+    font-size: 1rem;
+    font-weight: 700;
     color: var(--text);
     cursor: pointer;
     transition: color 0.3s ease;
+}
+
+.nav a {
+    text-decoration: none;
 }
 
 .nav p:hover {
@@ -78,6 +84,7 @@ body{
     letter-spacing: -2px;
 }
 
+/*LOGO*/
 .header-logo{
     display: flex;
     align-items: center;
@@ -96,13 +103,28 @@ body{
     font-family: var(--font-display);
     font-weight: 700;
     font-size: 1.2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    user-select: none;
 }
 
+.header-logo span:hover{
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(108, 99, 255, 0.0.4);
+}
+
+.header-logo span:active{
+    transform: scale(1);
+}
+
+/*LOGO TEXT*/
 .header-logo-text{
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;  
     flex-direction: column;
+    cursor: pointer;
+    user-select: none;
 }
 
 .header-logo-text h1{
@@ -139,7 +161,9 @@ body{
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 1.5px;
-    text-transform: uppercase;    
+    text-transform: uppercase;   
+    cursor: pointer; 
+    user-select: none;
 }
 
 .status-dot {
@@ -157,10 +181,14 @@ body{
   100% { opacity: 1; }
 }
 
-.system-stauts time{
+#clock{
     text-align: center;
     font-family: var(--font-mono);
     color: var(--text);
+    font-weight: 600;
+    font-size: 1.2rem;
+    user-select: none;
+    cursor: pointer;
 }
 
 /* CUSTOM SCROLLBAR */
@@ -327,68 +355,6 @@ body{
     border-radius: 10px;
 }
 
-/* SYSTEM & SECURITY */
-.system-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 15px;
-    background: linear-gradient(135deg, var(--surface), var(--bg));
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    margin-top: 15px;
-    position: relative;
-    overflow: hidden;
-    padding: 15px;
-}
-
-.system-list::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: var(--accent2);
-}
-
-.system-item, .security-item {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.75rem;
-    font-family: var(--font-mono);
-    padding: 4px 0;
-    border-bottom: 1px dashed var(--border);
-}
-
-.system-item span, .security-item span {
-    color: var(--muted);
-}
-
-.system-item strong, .security-item strong {
-    color: var(--accent3);
-}
-
-.security-card {
-    background: linear-gradient(135deg, var(--surface), var(--bg));
-    padding: 15px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    margin-top: 15px;
-    position: relative;
-    overflow: hidden;
-}
-
-.security-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: var(--accent2);
-}
-
 /*MAIN*/
 .main{
     grid-area: main;
@@ -535,7 +501,7 @@ form {
     border-radius: 8px;
     color: white;
     font-family: var(--font-display);
-    font-weight: 800;
+    font-weight: 700;
     font-size: 0.9rem;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -543,7 +509,6 @@ form {
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .sumbit-btn:hover {
@@ -570,24 +535,6 @@ form {
     left: 150%;
 }
 
-.sumbit-btn::after {
-    content: "SCANNING...";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--accent3);
-    color: var(--bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-.sumbit-btn.loading::after { transform: translateY(0); } 
-
 /*RIGHT SIDEBAR*/
 .right-sidebar{
     grid-area: right;
@@ -609,36 +556,6 @@ form {
     font-family: var(--font-mono);
     font-size: .75rem;
     color: var(--muted);
-}
-
-/* NETWORK */
-.network-stats{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.network-item{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 10px 14px;
-}
-
-.network-item span{
-    font-size: .7rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--muted);
-}
-
-.network-item strong{
-    font-size: .75rem;
-    font-family: var(--font-mono);
-    color: var(--accent3);
 }
 
 /* RULES ENGINE */
@@ -703,7 +620,7 @@ form {
 .progress-bar{
     width: 100%;
     height: 6px;
-    background: var(--surface);
+    background: var(--border);
     border-radius: 4px;
     overflow: hidden;
 }
