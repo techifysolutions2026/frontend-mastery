@@ -63,28 +63,43 @@
                 <div class="field-status-list">
 
                     <div class="field-status-item">
-                        <div class="circle"></div>
-                        <p>NAME</p>
+                        <div>
+                            <div class="circle"></div>
+                            <p class="field-status-title">NAME</p>
+                        </div>
+                        <p class="status-text">WAITING</p>   
                     </div>
 
                     <div class="field-status-item">
-                        <div class="circle"></div>
-                        <p>EMAIL</p>
+                        <div>
+                            <div class="circle"></div>
+                            <p class="field-status-title">EMAIL</p>
+                        </div>
+                        <p class="status-text">WAITING</p>
                     </div>
 
                     <div class="field-status-item">
-                        <div class="circle"></div>
-                        <p>PASS</p>
+                        <div>
+                            <div class="circle"></div>
+                            <p class="field-status-title">PASS</p>
+                        </div>
+                        <p class="status-text">WAITING</p>
                     </div>
 
                     <div class="field-status-item">
-                        <div class="circle"></div>
-                        <p>PHONE</p>
+                        <div>
+                            <div class="circle"></div>
+                            <p class="field-status-title">PHONE</p>
+                        </div>
+                        <p class="status-text">WAITING</p>
                     </div>
 
                     <div class="field-status-item">
-                        <div class="circle"></div>
-                        <p>URL</p>
+                        <div>
+                            <div class="circle"></div>
+                            <p class="field-status-title">URL</p>
+                        </div>
+                        <p class="status-text">WAITING</p>
                     </div>
 
                 </div>
@@ -104,13 +119,13 @@
                     <!-- VALID COUNT -->
                     <div class="valid-count">
                         <h3>VALID</h3>
-                        <p>00</p>
+                        <p id="valid-count">00</p>
                     </div>
 
                     <!-- ERROR COUNT -->
                     <div class="error-count">
                         <h3>ERRORS</h3>
-                        <p>00</p>
+                        <p id="error-count">00</p>
                     </div>
 
                 </div>
@@ -161,7 +176,7 @@
 
                         <div>
                             <label for="name"> <span>01</span>NAME</label>
-                            <label for="name">IDEL</label>
+                            <label for="name" class="waiting">IDEL</label>
                         </div>
 
                         <input 
@@ -181,7 +196,7 @@
 
                         <div>
                             <label for="email"><span>02</span>EMAIL</label>
-                            <label for="email">IDEL</label>
+                            <label for="email" class="waiting">IDEL</label>
                         </div>
                         
                         <input 
@@ -201,7 +216,7 @@
 
                         <div>
                             <label for="password"><span>03</span>PASSWORD</label>
-                            <label for="password">IDEL</label>
+                            <label for="password" class="waiting">IDEL</label>
                         </div>
                         
                         <input 
@@ -221,7 +236,7 @@
 
                         <div>
                             <label for="phone"><span>04</span>PHONE</label>
-                            <label for="phone">IDEL</label>
+                            <label for="phone" class="waiting">IDEL</label>
                         </div>
 
                         <input 
@@ -241,7 +256,7 @@
                         
                         <div>
                             <label for="url"><span>05</span>URL <span>(OPTIONAL)</span></label>
-                            <label for="url">IDEL</label>
+                            <label for="url" class="waiting">IDEL</label>
                         </div>
 
                         <input 
@@ -255,11 +270,9 @@
 
                     </div>
 
-                </form>
+                    <input type="Sumbit" class="sumbit-btn" id="sumbit"" value="VlIDATE-SUMBIT YOUR FORM">
 
-                <button class="sumbit-btn">
-                    SUMBIT-VALIDATE ALL FIELDS
-                </button>
+                </form>
 
             </section>
 
@@ -293,27 +306,39 @@
 
                     <div class="rule-item">
                         <div class="rule-indicator"></div>
-                        <p>Name Validation</p>
+                        <p class="status-text1">NAME : Min 3 chars</p>
                     </div>
 
                     <div class="rule-item">
-                        <div class="rule-indicator"></div>
-                        <p>Email Pattern Check</p>
+                        <div>
+                            <div class="rule-indicator"></div>
+                            <p>EMAIL</p>
+                        </div>
+                        <p class="status-text1">Valid Address</p>
                     </div>
 
                     <div class="rule-item">
-                        <div class="rule-indicator"></div>
-                        <p>Password Security</p>
+                        <div>
+                            <div class="rule-indicator"></div>
+                            <p>PASS</p>
+                        </div>
+                        <p class="status-text1">Min 8 chars</p>
                     </div>
 
                     <div class="rule-item">
-                        <div class="rule-indicator"></div>
-                        <p>Phone Format Match</p>
+                        <div>
+                            <div class="rule-indicator"></div>
+                            <p>PHONE</p>
+                        </div>
+                        <p class="status-text1">10 Digits</p>
                     </div>
 
                     <div class="rule-item">
-                        <div class="rule-indicator"></div>
-                        <p>URL Verification</p>
+                        <div>
+                            <div class="rule-indicator"></div>
+                            <p>URL</p>
+                        </div>
+                        <p class="status-text1">Valid Link</p>
                     </div>
 
                 </div>

@@ -16,12 +16,15 @@
   --accent2: #ff6584;
   --accent3: #43e97b;
 
-  --valid: #43e97b;
+  --valid: rgba(34, 197, 94, 0.14);
   --error: #ff6584;
   --warn: #ffd166;
+  --valid-dot:#00ff80;
+  --valid-dot-shadow: 0 0 8px rgba(0, 255, 128, 0.8);;
 
   --text: #e8e8f0;
   --muted: #6b6b80;
+  --color-valid: #00ff80;
 
   --font-display: 'Syne', sans-serif;
   --font-mono: 'DM Mono', monospace;
@@ -264,12 +267,20 @@ body{
 .field-status-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 12px;
     background-color: var(--surface);
     border-radius: 10px;
     padding: 10px 20px;
     flex: 1;
     border: 2px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.field-status-item > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .circle {
@@ -277,7 +288,6 @@ body{
     height: 8px;
     border-radius: 50%;
     border: 1.5px solid var(--muted);
-    background: transparent;
     transition: all 0.3s ease;
 }
 
@@ -286,6 +296,13 @@ body{
     font-size: 0.85rem;
     color: var(--muted);
     letter-spacing: 1px;
+}
+
+.status-text {
+    font-size: 0.6rem;
+    font-weight:  500;
+    color: var(--valid);
+    opacity: 1;
 }
 
 /* METRICS */
@@ -509,15 +526,21 @@ form {
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
+    text-align: center;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .sumbit-btn:hover {
     transform: translateY(-3px) scale(1.01);
     box-shadow: 0 12px 25px rgba(108, 99, 255, 0.4);
+    outline: none;
 }
 
 .sumbit-btn:active {
     transform: translateY(-1px) scale(0.99);
+    outline: none;
 }
 
 .sumbit-btn::before {
@@ -569,24 +592,34 @@ form {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
     padding: 10px 14px;
+    transition: all 0.3s ease;
+}
+
+.status-text{
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    color: var(--muted);
+}
+
+.rule-item > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .rule-indicator{
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--accent3);
+    background: var(--muted);
     box-shadow: 0 0 6px rgba(67, 233, 123, 0.5);
 }
 
 .rule-item p{
-    font-size: .75rem;
+    font-size: .9rem;
     font-weight: 500;
-    color: var(--text);
+    color: var(--muted);
 }
 
 /* VALIDATION PROGRESS */
