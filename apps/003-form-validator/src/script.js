@@ -27,7 +27,7 @@ setInterval( ClockFunction, 1000);
 //! FORM VALIDATION
 //*DOM ELEMENT SELECT
 
-//*LEFT SIDEBAR
+//*BOTH SIDEBAR
 let field = document.querySelectorAll(".field-status-item")
 let circle = document.querySelectorAll(".circle")
 let validCount = document.querySelector("#valid-count")
@@ -35,8 +35,9 @@ let errorCount = document.querySelector("#error-count")
 let sts = document.querySelector(".status-text")
 let waitingInput = document.querySelector("small")
 let status1 = document.querySelector(".status-text1")
+let fieldTitle =  document.querySelectorAll(".field-status-title")
 
-//*RIGHT SIDEBAR
+//*MAIN SECTION 
 let nm = document.querySelector("#name")
 let email = document.querySelector("#email")
 let password = document.querySelector("#password")
@@ -44,7 +45,6 @@ let phone = document.querySelector("#phone")
 let url = document.querySelector("#url")
 let sumbit = document.querySelector("#sumbit-btn")
 let form = document.querySelector("form")
-let fieldTitle =  document.querySelectorAll(".field-status-title")
 let inputStatus = document.querySelector(".waiting")
 
 //*NAME INPUT VALIDATION
