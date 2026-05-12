@@ -175,7 +175,7 @@
                     <div class="input-group">
 
                         <div>
-                            <label for="name"> <span>01</span>NAME</label>
+                            <label for="name" class="waiting2"> <span>01</span>NAME</label>
                             <label for="name" class="waiting">IDEL</label>
                         </div>
 
@@ -195,7 +195,7 @@
                     <div class="input-group">
 
                         <div>
-                            <label for="email"><span>02</span>EMAIL</label>
+                            <label for="email" class="waiting2"><span>02</span>EMAIL</label>
                             <label for="email" class="waiting">IDEL</label>
                         </div>
                         
@@ -215,7 +215,7 @@
                     <div class="input-group">
 
                         <div>
-                            <label for="password"><span>03</span>PASSWORD</label>
+                            <label for="password" class="waiting2"><span>03</span>PASSWORD</label>
                             <label for="password" class="waiting">IDEL</label>
                         </div>
                         
@@ -235,7 +235,7 @@
                     <div class="input-group">
 
                         <div>
-                            <label for="phone"><span>04</span>PHONE</label>
+                            <label for="phone" class="waiting2"><span>04</span>PHONE</label>
                             <label for="phone" class="waiting">IDEL</label>
                         </div>
 
@@ -255,16 +255,15 @@
                     <div class="input-group">
                         
                         <div>
-                            <label for="url"><span>05</span>URL <span>(OPTIONAL)</span></label>
-                            <label for="url" class="waiting">IDEL</label>
+                            <label for="gender" class="waiting2"><span>05</span>GENDER</label>
+                            <label for="gender" class="waiting">IDEL</label>
                         </div>
 
-                        <input 
-                        type="url" 
-                        id="url" 
-                        name="url"
-                        placeholder="ENTER WEBSITE URL"
-                        >
+                        <select name="GENDER" id="gender">
+                            <option value="male">MALE</option>
+                            <option value="female">FEMALE</option>
+                            <option value="other">OTHER</option>
+                        </select>
 
                         <small>Awaiting input...</small>
 
@@ -305,40 +304,40 @@
                 <div class="rules-list">
 
                     <div class="rule-item">
-                        <div class="rule-indicator"></div>
-                        <p class="status-text1">NAME : Min 3 chars</p>
+                        <div class="circle"></div>
+                        <p class="status-text1">NAME : Min 4 chars</p>
                     </div>
 
                     <div class="rule-item">
                         <div>
-                            <div class="rule-indicator"></div>
-                            <p>EMAIL</p>
+                            <div class="circle"></div>
+                            <p>EMAIL :</p>
                         </div>
                         <p class="status-text1">Valid Address</p>
                     </div>
 
                     <div class="rule-item">
                         <div>
-                            <div class="rule-indicator"></div>
-                            <p>PASS</p>
+                            <div class="circle"></div>
+                            <p>PASS :</p>
                         </div>
                         <p class="status-text1">Min 8 chars</p>
                     </div>
 
                     <div class="rule-item">
                         <div>
-                            <div class="rule-indicator"></div>
-                            <p>PHONE</p>
+                            <div class="circle"></div>
+                            <p>PHONE :</p>
                         </div>
                         <p class="status-text1">10 Digits</p>
                     </div>
 
                     <div class="rule-item">
                         <div>
-                            <div class="rule-indicator"></div>
-                            <p>URL</p>
+                            <div class="circle"></div>
+                            <p>GENDER :</p>
                         </div>
-                        <p class="status-text1">Valid Link</p>
+                        <p class="status-text1">select gender</p>
                     </div>
 
                 </div>
@@ -357,7 +356,7 @@
 
                     <div class="progress-info">
                         <span>VALIDATION</span>
-                        <strong>0%</strong>
+                        <strong id="progress-meter">0%</strong>
                     </div>
 
                     <div class="progress-bar">
