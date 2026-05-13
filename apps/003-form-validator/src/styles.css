@@ -342,8 +342,8 @@ body{
     font-family: var(--font-display);
 }
 
-.valid-count p { color: var(--valid); }
-.error-count p { color: var(--error); }
+.valid-count p { color: var(--color-valid); }
+.error-count p { color: var(--color-error); }
 
 /* PASS STRENGTH */
 .password{

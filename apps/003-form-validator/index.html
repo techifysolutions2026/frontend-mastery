@@ -22,7 +22,7 @@
     <body>
 
         <!-- HEADER -->
-        <header class="header">
+        <header aria-label="header" class="header">
 
             <!-- Logo / Brand -->
             <div class="header-logo">
@@ -49,7 +49,7 @@
         </header>
 
         <!-- LEFT SIDEBAR -->
-        <aside class="left-sidebar">
+        <aside aria-label="left-sidebar" class="left-sidebar">
 
             <!-- FIELD STATUS -->
             <section class="field-status">
@@ -119,13 +119,13 @@
                     <!-- VALID COUNT -->
                     <div class="valid-count">
                         <h3>VALID</h3>
-                        <p id="valid-count">00</p>
+                        <p id="valid-count">0</p>
                     </div>
 
                     <!-- ERROR COUNT -->
                     <div class="error-count">
                         <h3>ERRORS</h3>
-                        <p id="error-count">00</p>
+                        <p id="error-count">0</p>
                     </div>
 
                 </div>
@@ -149,7 +149,7 @@
         </aside>
 
         <!-- MAIN -->
-        <main class="main">
+        <main aria-label="main" class="main">
 
             <!-- TOP BAR -->
             <section class="top-panel">
@@ -278,7 +278,7 @@
         </main>
 
         <!-- RIGHT SIDEBAR -->
-        <aside class="right-sidebar">
+        <aside aria-label="right-sidebar" class="right-sidebar">
 
             <!-- CHANGE LOG -->
             <section class="changelog">
@@ -309,35 +309,23 @@
                     </div>
 
                     <div class="rule-item">
-                        <div>
-                            <div class="circle"></div>
-                            <p>EMAIL :</p>
-                        </div>
-                        <p class="status-text1">Valid Address</p>
+                        <div class="circle"></div>
+                        <p class="status-text1">EMAIL :Valid Address</p>
                     </div>
 
                     <div class="rule-item">
-                        <div>
-                            <div class="circle"></div>
-                            <p>PASS :</p>
-                        </div>
-                        <p class="status-text1">Min 8 chars</p>
+                        <div class="circle"></div>
+                        <p class="status-text1">PASS :Min 8 chars</p>
                     </div>
 
                     <div class="rule-item">
-                        <div>
-                            <div class="circle"></div>
-                            <p>PHONE :</p>
-                        </div>
-                        <p class="status-text1">10 Digits</p>
+                        <div class="circle"></div>
+                        <p class="status-text1">PHONE :10 Digits</p>
                     </div>
 
                     <div class="rule-item">
-                        <div>
-                            <div class="circle"></div>
-                            <p>GENDER :</p>
-                        </div>
-                        <p class="status-text1">select gender</p>
+                        <div class="circle"></div>
+                        <p class="status-text1">GENDER :select gender</p>
                     </div>
 
                 </div>
@@ -356,7 +344,6 @@
 
                     <div class="progress-info">
                         <span>VALIDATION</span>
-                        <strong id="progress-meter">0%</strong>
                     </div>
 
                     <div class="progress-bar">

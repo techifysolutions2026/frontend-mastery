@@ -1,4 +1,5 @@
 //! CLOCK
+
 function ClockFunction(){
 
     //DOM ELEMENT
@@ -25,21 +26,19 @@ ClockFunction();
 setInterval( ClockFunction, 1000);
 
 //! FORM VALIDATION
+
 //*DOM ELEMENT SELECT
 
-//*BOTH SIDEBAR
+//?BOTH SIDEBAR
 let field = document.querySelectorAll(".field-status-item")
 let circle = document.querySelectorAll(".circle")
-let validCount = document.querySelector("#valid-count")
-let errorCount = document.querySelector("#error-count")
-let sts = document.querySelector(".status-text")
+let sts = document.querySelectorAll(".status-text")
 let waitingInput = document.querySelector("small")
-let status1 = document.querySelector(".status-text1")
+let status1 = document.querySelectorAll(".status-text1")
 let fieldTitle =  document.querySelectorAll(".field-status-title")
 let progressBar = document.querySelector(".progress-bar")
-let progressMeter = document.querySelector("#progress-meter")
 
-//*MAIN SECTION 
+//?MAIN SECTION 
 let nm = document.querySelector("#name")
 let email = document.querySelector("#email")
 let password = document.querySelector("#password")
@@ -47,11 +46,11 @@ let phone = document.querySelector("#phone")
 let gender = document.querySelector("#gender")
 let sumbit = document.querySelector("#sumbit-btn")
 let form = document.querySelector("form")
-let inputStatus = document.querySelector(".waiting")
-let finalSelection = document.querySelector("small")
-let inputStatus2 = document.querySelector(".waiting2")
+let inputStatus = document.querySelectorAll(".waiting")
+let finalSelection = document.querySelectorAll("small")
+let inputStatus2 = document.querySelectorAll(".waiting2");
 
-//*GLOBAL
+//?GLOBAL
 let valiDationState = {
     nm: false,
     email: false,
@@ -59,6 +58,8 @@ let valiDationState = {
     phone: false,
     url: false,
 };
+let validCount = document.querySelector("#valid-count")
+let errorCount = document.querySelector("#error-count")
 
 //*PROGRESS BAR UPDATE FUNCTION
 function upDateProggressBar(){
@@ -70,7 +71,19 @@ function upDateProggressBar(){
 
     progressBar.style.width = percentage + "%"
     progressBar.style.backgroundColor = "var(--color-valid)"
-    progressMeter.innerText = percentage + "%"
+}
+
+//*VALID AND ERROR COUNT FUNCITON
+function count(){
+
+    const states = Object.values(valiDationState);
+
+    const validField = states.filter(val => val === true).length;
+    const errorField = states.length - validField;
+
+    validCount.innerText = validField;
+    errorCount.innerText = errorField;
+
 }
 
 //*NAME INPUT VALIDATION
@@ -86,23 +99,19 @@ function validateName(){
         circle[0].style.backgroundColor = "";
         circle[0].style.boxShadow = "";
         fieldTitle[0].style.color = "";
-        sts.style.color = "";
-        sts.innerText = "Waiting";
-        inputStatus.style.backgroundColor = "";
-        inputStatus.style.borderColor = "";
-        inputStatus.style.color = "";
+        sts[0].style.color = "";
+        sts[0].innerText = "Waiting";
+        inputStatus[0].style.backgroundColor = "";
+        inputStatus[0].style.borderColor = "";
+        inputStatus[0].style.color = "";
+        inputStatus[0].innerText = "IDEL";
         nm.style.boxShadow = "";
         nm.style.borderColor = "";
-        validCount.innerText = "00"
-        validCount.style.color = "";
-        errorCount.innerText = "00";
-        errorCount.style.color = "";
-        status1.style.color = "";
-        finalSelection.style.color = "";
-        finalSelection.innerText = "Awating Input...";
-        inputStatus2.style.color = "";
+        status1[0].style.color = "";
+        finalSelection[0].style.color = "";
+        finalSelection[0].innerText = "Awating Input...";
+        inputStatus2[0].style.color = "";
         valiDationState.nm = false;
-        progressMeter.innerText = "0%"
     }
     
     else if(val.length <= 3){
@@ -113,23 +122,19 @@ function validateName(){
         circle[0].style.backgroundColor = "var(--error-dot)";
         circle[0].style.boxShadow = "var(--error-dot-shadow)";
         fieldTitle[0].style.color = "var(--color-error)";
-        sts.style.color = "var(--color-error)";
-        sts.innerText = "Error";
-        inputStatus.style.backgroundColor = "var(--error)";
-        inputStatus.style.borderColor = "var(--color-error)";
-        inputStatus.style.color = "var(--color-error)";
+        sts[0].style.color = "var(--color-error)";
+        sts[0].innerText = "Error";
+        inputStatus[0].style.backgroundColor = "var(--error)";
+        inputStatus[0].style.borderColor = "var(--color-error)";
+        inputStatus[0].style.color = "var(--color-error)";
+        inputStatus[0].innerText = "ERROR";
         nm.style.boxShadow = "var(--red-glow)";
         nm.style.borderColor = "var(--color-error)";
-        validCount.innerText = "00"
-        validCount.style.color = "";
-        errorCount.innerText = "01"
-        errorCount.style.color = "var(--color-error)";
-        status1.style.color = "var(--color-error)";
-        finalSelection.style.color = "var(--color-error)";
-        finalSelection.innerText = "The Name Should Be 4 Charc Long";
-        inputStatus2.style.color = "var(--color-error)";
+        status1[0].style.color = "var(--color-error)";
+        finalSelection[0].style.color = "var(--color-error)";
+        finalSelection[0].innerText = "The Name Should Be 4 Charc Long";
+        inputStatus2[0].style.color = "var(--color-error)";
         valiDationState.nm = false;
-        progressMeter.innerText = "0%"
     }
     
     else{
@@ -140,25 +145,23 @@ function validateName(){
         circle[0].style.backgroundColor = "var(--valid-dot)";
         circle[0].style.boxShadow = "var(--valid-dot-shadow)";
         fieldTitle[0].style.color = "var(--color-valid)";
-        sts.style.color = "var(--color-valid)";
-        sts.innerText = "Valid";
-        inputStatus.style.backgroundColor = "var(--valid)";
-        inputStatus.style.borderColor = "var(--color-valid)";
-        inputStatus.style.color = "var(--color-valid)";
+        sts[0].style.color = "var(--color-valid)";
+        sts[0].innerText = "Valid";
+        inputStatus[0].style.backgroundColor = "var(--valid)";
+        inputStatus[0].style.borderColor = "var(--color-valid)";
+        inputStatus[0].style.color = "var(--color-valid)";
+        inputStatus[0].innerText = "VALID";
         nm.style.boxShadow = "var(--green-glow)";
         nm.style.borderColor = "var(--color-valid)";
-        validCount.innerText = "01"
-        validCount.style.color = "var(--color-valid)";
-        errorCount.innerText = "00";
-        errorCount.style.color = "";
-        status1.style.color = "var(--color-valid)";
-        finalSelection.style.color = "var(--color-valid)";
-        finalSelection.innerText = "Valid";
-        inputStatus2.style.color = "var(--color-valid)";
+        status1[0].style.color = "var(--color-valid)";
+        finalSelection[0].style.color = "var(--color-valid)";
+        finalSelection[0].innerText = "Valid";
+        inputStatus2[0].style.color = "var(--color-valid)";
         valiDationState.nm = true;
     }
-
+    
     upDateProggressBar();
+    count()
 }
 
 nm.addEventListener("input" , validateName);
@@ -168,10 +171,79 @@ function validateEmail(){
 
     let val = email.value.trim();
 
-    if(val.length <= 8){
-        
+    if(val === ""){
+        field[1].style.backgroundColor = "";
+        field[1].style.borderColor = "";
+        circle[6].style.backgroundColor = "";
+        circle[6].style.boxShadow = "";
+        circle[1].style.backgroundColor = "";
+        circle[1].style.boxShadow = "";
+        fieldTitle[1].style.color = "";
+        sts[1].style.color = "";
+        sts[1].innerText = "Waiting";
+        inputStatus[1].style.backgroundColor = "";
+        inputStatus[1].style.borderColor = "";
+        inputStatus[1].style.color = "";
+        inputStatus[1].innerText = "IDEL";
+        email.style.boxShadow = "";
+        email.style.borderColor = "";
+        status1[1].style.color = "";
+        finalSelection[1].style.color = "";
+        finalSelection[1].innerText = "Awating Input...";
+        inputStatus2[1].style.color = "";
+        valiDationState.email = false;
     }
 
+    else if(val.length <= 6){
+
+        field[1].style.backgroundColor = "var(--error)";
+        field[1].style.borderColor = "var(--color-error)";
+        circle[6].style.backgroundColor = "var(--error-dot)";
+        circle[6].style.boxShadow = "var(--error-dot-shadow)";
+        circle[1].style.backgroundColor = "var(--error-dot)";
+        circle[1].style.boxShadow = "var(--error-dot-shadow)";
+        fieldTitle[1].style.color = "var(--color-error)";
+        sts[1].style.color = "var(--color-error)";
+        sts[1].innerText = "Error";
+        inputStatus[1].style.backgroundColor = "var(--error)";
+        inputStatus[1].style.borderColor = "var(--color-error)";
+        inputStatus[1].style.color = "var(--color-error)";
+        inputStatus[1].innerText = "ERROR";
+        email.style.boxShadow = "var(--red-glow)";
+        email.style.borderColor = "var(--color-error)";
+        status1[1].style.color = "var(--color-error)";
+        finalSelection[1].style.color = "var(--color-error)";
+        finalSelection[1].innerText = "Please Enter the Correct Format";
+        inputStatus2[1].style.color = "var(--color-error)";
+        valiDationState.email = false;
+    }
+
+    else{
+
+        field[1].style.backgroundColor = "var(--valid)";
+        field[1].style.borderColor = "var(--color-valid)";
+        circle[6].style.backgroundColor = "var(--valid-dot)";
+        circle[6].style.boxShadow = "var(--valid-dot-shadow)";
+        circle[1].style.backgroundColor = "var(--valid-dot)";
+        circle[1].style.boxShadow = "var(--valid-dot-shadow)";
+        fieldTitle[1].style.color = "var(--color-valid)";
+        sts[1].style.color = "var(--color-valid)";
+        sts[1].innerText = "Valid";
+        inputStatus[1].style.backgroundColor = "var(--valid)";
+        inputStatus[1].style.borderColor = "var(--color-valid)";
+        inputStatus[1].style.color = "var(--color-valid)";
+        inputStatus[1].innerText = "VALID";
+        email.style.boxShadow = "var(--green-glow)";
+        email.style.borderColor = "var(--color-valid)";
+        status1[1].style.color = "var(--color-valid)";
+        finalSelection[1].style.color = "var(--color-valid)";
+        finalSelection[1].innerText = "Valid";
+        inputStatus2[1].style.color = "var(--color-valid)";
+        valiDationState.email = true;
+    }
+
+    upDateProggressBar();
+    count();
 }
 
 email.addEventListener("input", validateEmail);
