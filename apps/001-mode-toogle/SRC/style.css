@@ -570,7 +570,7 @@ main{
 }
 
 .module h4 {
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--muted);
     letter-spacing: 1px;
@@ -633,7 +633,8 @@ footer{
     gap: 10px;
 
     p{
-        font-size: 1rem;    
+        font-size: 1rem;   
+        transition: all 0.4s ease; 
     }
 }
 
@@ -650,11 +651,13 @@ footer{
         font-size: 1rem;
         font-family: var(--font-main);
         border-radius: 10px;
+        transition: all 0.4s ease;
     }
 }
 
 .title-footer{
     color: var(--off-accent);
+    transition: all 0.4s ease;
 }
 
 /*CENTER FOOTER*/
@@ -682,12 +685,69 @@ footer{
 .space{
     border: 3px solid var(--accent);
     padding: 3px 9px;
+    transition: all 0.4s ease;
 }
 
 .right-footer time{
     color: var(--off-accent);
+    transition: all 0.4s ease;
 }
 /* OTHER */
 .text{
     color: var(--text-bright);
+}
+
+/*!MOBILE RESPONSIVE DESIGN*/
+@media (max-width : 400px){
+
+    body{
+        height: 110vh;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .title-header{
+        font-size: 1.4rem;
+    }
+
+    .title-header2{
+        display: none;
+    }
+
+    .left-header span{
+        display: none;
+    }
+
+    .left-sidebar{
+        display: none;
+    }
+
+    .right-sidebar{
+        display: none;
+    }
+
+    .bulb-div{
+        margin-top: 3vh;
+    }
+
+    .power-btn{
+        margin-top: 10vh;
+    }
+
+    .extra-information{
+        margin-top: 8vh;
+    }
+
+    .extra-information-title{
+        text-align: center;
+    }
+
+    .extra-information div{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+
 }

@@ -23,6 +23,23 @@ const sidebarTitleID = document.querySelectorAll("#left-sidebar-title")
 const plusIcon = document.querySelectorAll(".plus-icon")
 const extraInformation = document.querySelector(".extra-information");
 const extraInformation2 = document.querySelector(".extra-information-title");
+const titleFooter = document.querySelectorAll(".title-footer")
+let valuesDisplay = document.querySelectorAll(".text");
+let interval = 5000;
+
+//!COUNT UP FUNCTION
+valuesDisplay.forEach((valuesDisplay) => {
+    let startValue = 0;
+    let endValue = parseInt(valuesDisplay.getAttribute("data-val"))
+    let duration = Math.floor(interval / endValue);
+    let counter = setInterval(()=>{
+        startValue += 1;
+        valuesDisplay.textContent = startValue;
+        if(startValue == endValue ){
+            clearInterval(counter);
+        }
+    }, duration); 
+});
 
 //!CLOCK FUNCTION
 function clock(){
@@ -124,12 +141,17 @@ function mainFunction(){
         sideline1.forEach(line => {
             line.style.backgroundColor = "var(--accent)";
         })
+
+        titleFooter.forEach(footer => {
+            footer.style.color = "var(--accent)";
+        })
         
         clockTime.style.color = "var(--text-bright)";
         
         dateTime.style.color = "var(--text-bright)";
 
         isPowered = true;
+
     }
     else{
         mainObject.classList.remove("active");
@@ -186,6 +208,10 @@ function mainFunction(){
 
         sideline1.forEach(line => {
             line.style.backgroundColor = "var(--off-accent)";
+        })
+
+        titleFooter.forEach(footer => {
+            footer.style.color = "var(--off-accent)";
         })
 
         clockTime.style.color = "var(--text-dim)";
