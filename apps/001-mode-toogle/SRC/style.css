@@ -131,26 +131,41 @@ header{
 @keyframes glowup {
     0%{
         opacity: 1;
-    } 
-    
+    }
+
     20%{
         opacity: 0.4;
     }
-    
+
     40%{
         opacity: 1;
     }
-    
+
     60%{
         opacity: 0.4;
     }
-    
+
     80%{
         opacity: 1;
     }
-    
+
     100%{
         opacity: 0.4;
+    }
+}
+
+@keyframes countup-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
@@ -695,6 +710,7 @@ footer{
 /* OTHER */
 .text{
     color: var(--text-bright);
+    transition: all 0.4s ease;
 }
 
 /*!MOBILE RESPONSIVE DESIGN*/

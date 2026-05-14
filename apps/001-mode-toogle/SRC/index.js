@@ -25,21 +25,37 @@ const extraInformation = document.querySelector(".extra-information");
 const extraInformation2 = document.querySelector(".extra-information-title");
 const titleFooter = document.querySelectorAll(".title-footer")
 let valuesDisplay = document.querySelectorAll(".text");
-let interval = 5000;
 
-//!COUNT UP FUNCTION
-valuesDisplay.forEach((valuesDisplay) => {
-    let startValue = 0;
-    let endValue = parseInt(valuesDisplay.getAttribute("data-val"))
-    let duration = Math.floor(interval / endValue);
-    let counter = setInterval(()=>{
-        startValue += 1;
-        valuesDisplay.textContent = startValue;
-        if(startValue == endValue ){
-            clearInterval(counter);
+//! COUNTUP ANIMATION FUNCTIONd
+function countupAnimation(element, targetValue, duration = 600) {
+    const isNumeric = /^[\d.]+/.test(targetValue.toString());
+    if (!isNumeric) return;
+
+    element.style.animation = "none";
+    setTimeout(() => {
+        element.style.animation = "countup-pulse 0.6s ease-out";
+    }, 10);
+
+    const numericPart = parseFloat(targetValue.toString());
+    const start = 0;
+    const startTime = performance.now();
+
+    function animate(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const current = Math.floor(start + (numericPart - start) * progress);
+
+        element.innerText = current + (targetValue.toString().includes(" ") ? " " + targetValue.toString().split(" ")[1] : "");
+
+        if (progress < 1) {
+            requestAnimationFrame(animate);
+        } else {
+            element.innerText = targetValue;
         }
-    }, duration); 
-});
+    }
+
+    requestAnimationFrame(animate);
+}
 
 //!CLOCK FUNCTION
 function clock(){
@@ -105,6 +121,11 @@ function mainFunction(){
         extraInformation.style.borderColor = "var(--accent)"
         extraInformation2.innerText = "ACTIVE";
         extraInformation2.style.color = "var(--accent)";
+        countupAnimation(valuesDisplay[0], "200 V");
+        countupAnimation(valuesDisplay[1], "1.4 A");
+        countupAnimation(valuesDisplay[2], "450 W");
+        countupAnimation(valuesDisplay[3], "1.71");
+        countupAnimation(valuesDisplay[4], "12.4 hz");
         
         plusIcon.forEach(icon => {
             icon.style.color = "var(--accent3)"
@@ -173,6 +194,11 @@ function mainFunction(){
         extraInformation.style.borderColor = "var(--border)";
         extraInformation2.innerText = "STANDBY";
         extraInformation2.style.color = "var(--off-accent)";
+        countupAnimation(valuesDisplay[0], "000 V");
+        countupAnimation(valuesDisplay[1], "0.0 A");
+        countupAnimation(valuesDisplay[2], "000 W");
+        countupAnimation(valuesDisplay[3], "0.00");
+        countupAnimation(valuesDisplay[4], "00.0 hz");
 
         plusIcon.forEach(icon => {
             icon.style.color = "var(--off-accent)"
