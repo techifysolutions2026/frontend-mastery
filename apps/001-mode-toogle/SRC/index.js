@@ -248,9 +248,6 @@ function mainFunction(){
 
         dateTime.style.color = "var(--text-dim)";
 
-        audio.play();
-        audio.pause();
-
         isPowered = false;
     }
 }
