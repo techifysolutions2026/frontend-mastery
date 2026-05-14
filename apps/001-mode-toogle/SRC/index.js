@@ -25,6 +25,7 @@ const extraInformation = document.querySelector(".extra-information");
 const extraInformation2 = document.querySelector(".extra-information-title");
 const titleFooter = document.querySelectorAll(".title-footer")
 let valuesDisplay = document.querySelectorAll(".text");
+const audio = new Audio('resource/audio.wav');
 
 //! COUNTUP ANIMATION FUNCTIONd
 function countupAnimation(element, targetValue, duration = 600) {
@@ -100,6 +101,9 @@ todayDate();
 let isPowered = false;
 
 function mainFunction(){
+
+    audio.currentTime = 0;
+    audio.play();
 
     if(isPowered === false){
         mainObject.classList.add("active");
@@ -243,6 +247,9 @@ function mainFunction(){
         clockTime.style.color = "var(--text-dim)";
 
         dateTime.style.color = "var(--text-dim)";
+
+        audio.play();
+        audio.pause();
 
         isPowered = false;
     }
