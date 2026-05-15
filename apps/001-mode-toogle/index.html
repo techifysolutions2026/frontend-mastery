@@ -31,12 +31,14 @@
         <!-- Header -->
         <header aria-label="header">
 
+            <!-- LEFT HEADER -->
             <section class="left-header">
                 <p class="title-header">LCU-01</p>
                 <span>//</span>
                 <p class="title-header2">Light Control Unit</p>
             </section>
 
+            <!-- RIGHT HEADER -->
             <section class="right-header">
                 <div class="pwr">
                     <span class="yellow-dot"></span>
@@ -54,38 +56,48 @@
 
         </header>
 
+        <!-- MAIN CONTAINER FOR SIDEBAR AND MAIN SECTION -->
         <div class="main-wrapper">
 
             <!-- Left Sidebar: Power metric -->
             <aside aria-label="left-sidebar" class="left-sidebar">
 
+                <!-- LEFT SIDEBAR TITLE -->
                 <div class="left-sidebar-title-div">
                     <h2 class="left-sidebar-title">power metrics</h2>
                     <div class="sideline"></div>
                 </div>
                 
+                <!-- POWER STATS -->
                 <div class="power-stats-div">
+
+                    <!-- POWER STATS CONTENT -->
                     <div class="power-stats leftsideabr-item-1">
                         <p id="left-sidebar-title">voltage</p>
                         <h2 class="text" id="val-voltage" data-val="450">000  <span>V</span></h2>
                         <div class="sideline1"></div>
                     </div>
                     
+                    <!-- POWER STATS CONTENT -->
                     <div class="power-stats leftsidebar-item-2">
                         <p id="left-sidebar-title">Current</p>
                         <h2 class="text" id="val-current" data-val="1.4">0.0 <span>A</span></h2>
                         <div class="sideline1"></div>
                     </div>
                     
+                    <!-- POWER STATS CONTENT -->
                     <div class="power-stats leftsidebar-item-3">
                         <p id="left-sidebar-title">wattage</p>
                         <h2 class="text" id="val-wattage" data-val="300">000 <span>W</span></h2>
                         <div class="sideline1"></div>
                     </div>
+
                 </div>
 
+                <!-- PARTITION LINE -->
                 <div class="breakline"></div>
 
+                <!-- LEFT SIDEBAR TITLE 2 -->
                 <div class="left-sidebar-title-div">
                     <p class="left-sidebar-title">version control</p>
                     <div class="sideline"></div>
@@ -99,45 +111,53 @@
             <!-- Main Content: Interactive bulb and power toggle -->
             <main aria-label="main">
 
+                <!-- DECORATION ICON -->
                 <div class="plus-icon">
                     <p>+</p>
                     <p>+</p>
                 </div>
-
+                
+                <!-- MAIN OBJECT -->
                 <div class="bulb-div">
                     <div class="horizontal-line"></div>
                     <div class="bulb-filament"></div>
                     <div class="bulb"></div>
                 </div>
-
+                
+                <!-- MAIN SWITCH -->
                 <div class="power-btn-div">
                     <div class="power-btn">
                         <img src="RESOURCE/switch on.png" alt="CLICK">
                     </div>
                 </div>
-
+                
+                <!-- TOOGLE DISPLAY -->
                 <div class="extra-information">
                     
                     <p class="extra-information-title">standby</p>
 
                 </div>
-
+                
+                <!-- DECORATION ICON -->
                 <div class="plus-icon">
                     <p>+</p>
                     <p>+</p>
                 </div>
-
+                
             </main>
-
-            <!-- Right Sidebar: Efficiency stats and device information -->
+            
+            <!-- Right Sidebar: Efficiency stats -->
             <aside aria-label="right-sidebar" class="right-sidebar">
-
+                
+                <!-- RIGHT SIDEBAR TITLE -->
                 <div class="left-sidebar-title-div">
                     <p class="left-sidebar-title">efficiency</p>
                     <div class="sideline"></div>
                 </div>
 
+                <!-- EFFICIENCY STATS -->
                 <div class="effeciency-stats-div">
+
                     <div class="efficiency-stats-items power-stats">
                         <p id="left-sidebar-title">prime factor</p>
                         <h2 class="text" id="val-prime" data-val="1.40">0.00</h2>
@@ -149,10 +169,13 @@
                         <h2 class="text" id="val-freq" data-val="12.4">00.0 <span>hz</span></h2>
                         <div class="sideline1"></div>
                     </div>
+
                 </div>
 
+                <!-- PARTITION LINE -->
                 <div class="breakline"></div>
 
+                <!-- RIGHT SIDEBAR SECOND SECCTION -->
                 <section class="sidebar-footer">
 
                     <!--CREATOR INFO-->
@@ -165,7 +188,7 @@
                     <div class="state">
                         <p>STATE</p>
                         <span>:</span>
-                        <p>IN PROGRESS`</p>
+                        <p>COMPLELTE</p>
                     </div>
 
                 </section>
@@ -177,6 +200,7 @@
         <!-- Footer Section: Copyright, links, and keyboard shortcuts -->
         <footer aria-label="footer"">
 
+            <!-- LEFT FOOTER -->
             <div class="left-footer">
                 <p>&COPY; Karan Pillay</p>
                 <div class="left-footer-innerdiv">
@@ -185,14 +209,14 @@
                 </div>
             </div>
 
+            <!-- CENTER FOOTER -->
             <div class="center-footer">
-                <p class="title-footer">GITHUB</p>
+                <a href="https://github.com/techifysolutions2026?tab=overview&from=2026-05-01&to=2026-05-15" target="_blank"><p class="title-footer">GITHUB</p></a>
                 <span>||</span>
-                <p class="title-footer">LINKDEN</p>
-                <span>||</span>
-                <p class="title-footer">DOCUMENTATION</p>
+                <a href="https://github.com/techifysolutions2026/frontend-mastery" target="_blank"><p class="title-footer">DOCUMENTATION</p></a>
             </div>
 
+            <!-- RIGHT FOOTER -->
             <div class="right-footer">
                 <p>PRESS</p>
                 <p class="space">SPACE</p>
@@ -206,4 +230,5 @@
         <script src="SRC/index.js"></script>
 
     </body>
+
 </html>

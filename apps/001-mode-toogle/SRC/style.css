@@ -66,6 +66,7 @@ header{
     padding: 25px;
     border-bottom: 4px solid var(--border);
     transition: all 0.4s ease;
+    user-select: none;
 }
 
 /*LEFT HEADER*/
@@ -83,6 +84,10 @@ header{
     font-size: 1.1rem;
     letter-spacing: 1.7px;
     transition: all 0.4s ease;
+}
+
+.title-header:hover{
+    transform: scale(1.03);
 }
 
 .left-header span{
@@ -209,6 +214,7 @@ header{
     padding: 20px;
     overflow-y: auto;
     transition: all 0.4s ease;
+    user-select: none;
 }
 
 .left-sidebar-title-div{
@@ -329,6 +335,7 @@ main{
     display: flex;
     flex-direction: column;
     width: 100%;
+    user-select: none;
 }
 
 .plus-icon{
@@ -418,6 +425,7 @@ main{
     justify-content: center;
     margin-top: auto;
     transition: all 0.4s ease;
+    cursor: pointer;
 }
 
 .power-btn{
@@ -489,6 +497,7 @@ main{
     padding: 20px;
     overflow-y: auto;
     transition: all 0.4s ease;
+    user-select: none;
 }
 
 .effeciency-stats-div{
@@ -638,6 +647,7 @@ footer{
     padding: 25px;
     border-top: 4px solid var(--border);
     transition: all 0.4s ease;
+    user-select: none;
 }
 
 /*LEFT FOOTER*/
@@ -670,11 +680,6 @@ footer{
     }
 }
 
-.title-footer{
-    color: var(--off-accent);
-    transition: all 0.4s ease;
-}
-
 /*CENTER FOOTER*/
 .center-footer{
     display: flex;
@@ -687,6 +692,15 @@ footer{
 .center-footer span{
     color: var(--off-accent);
     font-weight: 900;
+}
+
+.center-footer a{
+    text-decoration: none;
+}
+
+.title-footer{
+    color: var(--off-accent);
+    transition: all 0.4s ease;
 }
 
 /*RIGHT FOOTER*/
