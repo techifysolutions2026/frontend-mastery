@@ -522,7 +522,7 @@ footer{
 }
 
 /*MOBILE RESPONSIVE DESIGN*/
-@media (max-width: 400px){
+@media (max-width: 480px){
 
     body{
         overflow-x: hidden;
