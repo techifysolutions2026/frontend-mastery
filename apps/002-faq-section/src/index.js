@@ -205,16 +205,16 @@ generalQuestions.forEach((questionText, index) => {
     const generalInnerHTML = `
         <div class="que">
             <p class="plus-icon">+</p>
+            <div class="bottom-line"></div>
             <p class="question">${questionText}</p>
         </div>
 
         <div class="ans">
             <div>
                 <p>${answerText}</p>
-                <img src="resource/link.png">
             </div>
             <div class="review-1">
-                <p>Is this Is helpfu</p>
+                <p>Is this Is helpful</p>
                 <img src="resource/heart (1).png">
             </div>
         </div>
@@ -231,13 +231,13 @@ processQuestions.forEach((questionText, index)=>{
     const processInnerHTML = `
         <div class="que">
             <p class="plus-icon">+</p>
+            <div class="bottom-line"></div>
             <p class="question">${questionText}</p>
         </div>
 
         <div class="ans">
             <div>
                 <p>${answerText}</p>
-                <img src="resource/link.png" alt="">
             </div>
             <div class="review-1">
                 <p>Is this Is helpful</p>
@@ -257,13 +257,13 @@ pricingQuestions.forEach((questionText, index)=>{
     const pricingInnerHTML = `
         <div class="que">
             <p class="plus-icon">+</p>
+            <div class="bottom-line"></div>
             <p class="question">${questionText}</p>
         </div>
 
         <div class="ans">
             <div>
                 <p>${answerText}</p>
-                <img src="resource/link.png" alt="">
             </div>
             <div class="review-1">
                 <p>Is this Is helpful</p>
@@ -277,19 +277,64 @@ pricingQuestions.forEach((questionText, index)=>{
 
 //!ANSWER REVEAL FUNCTION
 const mainBtn = document.querySelectorAll(".plus-icon")
-const ansDisplay = document.querySelectorAll(".ans")
 
 mainBtn.forEach((icon)=>{
 
     icon.addEventListener("click", ()=>{
 
         const associatedAns = icon.parentElement.nextElementSibling;
+        const associatedBottomLine = icon.nextElementSibling;
         
-        associatedAns.classList.toggle("active")
-        icon.classList.toggle("active")
+        if (associatedAns.classList.contains("active")) {
+            associatedAns.classList.remove("active");
+            icon.classList.remove("active");
+            associatedBottomLine.classList.remove("active");
+            return;
+        }
+        
+        document.querySelectorAll(".ans, .plus-icon, .bottom-line").forEach(el => el.classList.remove("active"));
+        
+        associatedAns.classList.add("active");
+        icon.classList.add("active");
+        associatedBottomLine.classList.add("active");
 
     })
 
-})
+});
 
-//!
+//!COUNT UP FUNCITON
+function countup(){
+    const counters = document.querySelectorAll(".stat-num")  //SLECTING THE NUMBER TO BE ANIMATED
+
+    counters.forEach((counter)=>{
+
+        const target = +counter.getAttribute("data-target"); //FINAL NUMBER
+        let current = 0;
+
+        //THE TIMER EVERY 20 MILISEC
+        const timer = setInterval(()=>{
+        
+            current += Math.ceil(target/100); //NUMBER INCREASED BY 1% EACH TIME WHEN THE TIMER RUN
+        
+            counter.innerText = current >= target ? target : current;
+            if(current >= target )clearInterval(timer);
+
+        }, 20)
+
+    })  
+
+}
+
+//*SETTING OBSERVER FOR CHECKING STATS SECTION IS VISIBLE OR NOT AND WHEN VISIBEL RUN THE FUNCITON
+const statsSection = document.querySelector(".stats")
+
+const observer = new IntersectionObserver((enteries)=>{
+
+    if(enteries[0].isIntersecting){
+        countup();
+        observer.disconnect();
+    }
+
+});
+
+observer.observe(statsSection);
