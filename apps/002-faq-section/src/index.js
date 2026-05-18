@@ -204,7 +204,7 @@ generalQuestions.forEach((questionText, index) => {
 
     const generalInnerHTML = `
         <div class="que">
-            <p class="plus-icon">+</p>
+            <div class="plus-icon">+</div>
             <div class="bottom-line"></div>
             <p class="question">${questionText}</p>
         </div>
@@ -230,7 +230,7 @@ processQuestions.forEach((questionText, index)=>{
 
     const processInnerHTML = `
         <div class="que">
-            <p class="plus-icon">+</p>
+            <div class="plus-icon">+</div>
             <div class="bottom-line"></div>
             <p class="question">${questionText}</p>
         </div>
@@ -256,7 +256,7 @@ pricingQuestions.forEach((questionText, index)=>{
 
     const pricingInnerHTML = `
         <div class="que">
-            <p class="plus-icon">+</p>
+            <div class="plus-icon">+</div>
             <div class="bottom-line"></div>
             <p class="question">${questionText}</p>
         </div>
